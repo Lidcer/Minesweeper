@@ -1,7 +1,7 @@
 import React from 'react';
 import io from 'socket.io-client';
 import { sample } from 'loadsh';
-import { MainStyled, MinButton, MainTitle } from './MainStyle';
+import { MainStyled, MinButton, MainTitle, MinNumber, MinBreak } from './MainStyle';
 
 interface IMainState {
   ready: boolean;
@@ -45,10 +45,21 @@ export class Main extends React.Component<{}, IMainState> {
   render() {
     return (
       <MainStyled>
+								<MinNumber>{this.state.number}<MinBreak/>{this.state.number}</MinNumber><MinBreak/>
+								<MinNumber>{this.state.number}<MinBreak/>{this.state.number}</MinNumber><MinBreak/>
+								<MinNumber>{this.state.number}<MinBreak/>{this.state.number}</MinNumber><MinBreak/>
+								<MinNumber>{this.state.number}<MinBreak/>{this.state.number}</MinNumber><MinBreak/>
+								<MinNumber>{this.state.number}<MinBreak/>{this.state.number}</MinNumber><MinBreak/>
+								<MinNumber>{this.state.number}<MinBreak/>{this.state.number}</MinNumber><MinBreak/>
+								<MinNumber>{this.state.number}<MinBreak/>{this.state.number}</MinNumber><MinBreak/>
+								<MinNumber>{this.state.number}<MinBreak/>{this.state.number}</MinNumber><MinBreak/>
+								<MinNumber>{this.state.number}<MinBreak/>{this.state.number}</MinNumber><MinBreak/>
+								<MinNumber>{this.state.number}<MinBreak/>{this.state.number}</MinNumber><MinBreak/>
+								<MinNumber>{this.state.number}<MinBreak/>{this.state.number}</MinNumber><MinBreak/>
+								<MinNumber>{this.state.number}<MinBreak/>{this.state.number}</MinNumber><MinBreak/>
         <MainTitle>Minesweeper (LOGO)</MainTitle>
 				<MinButton className='btn btn-primary btn-lg btn-block'>Start</MinButton>
         <MinButton className='btn btn-primary btn-lg btn-block'>Options</MinButton>
-        <div>{this.state.number}</div>
       </MainStyled>
     );
   }
