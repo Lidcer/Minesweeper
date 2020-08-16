@@ -32,7 +32,11 @@ export class Main extends React.Component<{},IMainState> {
 
 
   render() {
-    return <h1> Early alpha of minesweeper <br/>{this.webSocketInfo} </h1>
+    return <div>
+							<h1>Minesweeper (LOGO)</h1>
+							<button>Start</button><br/>
+							<button>Options</button>
+					 </div>
   }
 }
   
