@@ -30,3 +30,15 @@ $thumbBG: rgb(64, 64, 64);
     }
 
 }
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    outline: inherit;
+    &:hover{
+        color: inherit;
+        text-decoration: inherit;
+        outline: inherit;
+    }
+
+}

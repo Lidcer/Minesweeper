@@ -1,4 +1,6 @@
 import React from 'react';
+import { MainStyled } from '../Main/MainStyle';
+
 
 export class OfflineMode extends React.Component<{},{}> {
 
@@ -16,6 +18,6 @@ export class OfflineMode extends React.Component<{},{}> {
 
 
   render() {
-    return (<div>test</div>);
+    return (<MainStyled>test</MainStyled>);
   }
 }
