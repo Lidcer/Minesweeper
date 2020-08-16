@@ -26,21 +26,22 @@ export const MinNumber = styled.h2`
   padding-left: 70px;
   width: 220px;
   animation: moveText 5s infinite;
-  color: rgba(12, 12, 12, 0.8);
+  color: rgba(222, 22, 222, 0.8);
+	z-index: -1;
+	font-size: 50px;
 
   @keyframes moveText {
-    from {
-      left: 10px;
-    }
-    to {
-      left: 120px;
-    }
+		0%   {left: -200px; top: 0px;}
+		25%  {left: 250px; top: 0px;}
+		50%  {left: 250px; top: 360px;}
+		75%  {left: -250px; top: 0px;}
+		100% {left: 150px; top: -250px;}
   }
 `;
 
 export const MinBreak = styled.span`
   position: relative;
-  padding-bottom: 12px;
+
   display: block;
   font-size: 24%;
 `;
