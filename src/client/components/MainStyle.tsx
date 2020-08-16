@@ -5,6 +5,7 @@ export const MainStyled = styled.div`
   width: 50%;
   border: 3px solid green;
   padding: 10px;
+  text-align:center;
 `;
 
 export const MainTitle = styled.h1`
@@ -21,9 +22,9 @@ export const MinButton = styled.button`
   background-color:red;
   border-radius:5px;
   border: 1px solid white;
-  transform: color 5s;
+  transform: background-color 5s;
   
-  &:focus{
+  &:hover{
     background-color:purple;
   }
 `;
