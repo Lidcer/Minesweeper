@@ -1,6 +1,6 @@
 import React from 'react';
 import io from 'socket.io-client';
-import { MainStyled } from './MainStyle';
+import { MainStyled, MinButton, MainTitle } from './MainStyle';
 
 interface IMainState {
   ready: boolean;
@@ -33,10 +33,10 @@ export class Main extends React.Component<{}, IMainState> {
   render() {
     return (
       <MainStyled>
-        <h1>Minesweeper (LOGO)</h1>
-        <button>Start</button>
+        <MainTitle>Minesweeper (LOGO)</MainTitle>
+        <MinButton>Start</MinButton>
         <br />
-        <button>Options</button>
+        <MinButton>Options</MinButton>
       </MainStyled>
     );
   }
