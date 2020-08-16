@@ -34,9 +34,8 @@ export class Main extends React.Component<{}, IMainState> {
     return (
       <MainStyled>
         <MainTitle>Minesweeper (LOGO)</MainTitle>
-        <MinButton>Start</MinButton>
-        <br />
-        <MinButton>Options</MinButton>
+				<MinButton className='btn btn-primary btn-lg btn-block'>Start</MinButton>
+        <MinButton className='btn btn-primary btn-lg btn-block'>Options</MinButton>
       </MainStyled>
     );
   }

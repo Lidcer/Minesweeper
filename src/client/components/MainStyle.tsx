@@ -5,7 +5,7 @@ export const MainStyled = styled.div`
   margin: auto;
   width: 50vh;
   height: 50vh;
-  border: 3px inset green;
+  border: 1vh inset green;
   padding: 10px;
   text-align: center;
   left: 50%;
@@ -14,22 +14,46 @@ export const MainStyled = styled.div`
 `;
 
 export const MainTitle = styled.h1`
-  margin:auto;
-  display:block;
-  color:blue;
+  margin: auto;
+  display: block;
+  color: #2b5329;
+	font-weight: 1000;
+	padding-bottom: 20px;
 `;
 
 export const MinButton = styled.button`
-  margin:auto;
-  display:block;
-  color:white;
-  width: 60px;
-  background-color:red;
-  border-radius:5px;
+  margin: auto;
+  display: block;
+  color: white;
+  width: 150px;
+	height: 50px;
+  background-color: red;
+  border-radius: 10px;
   border: 1px solid white;
   transform: background-color 5s;
-  
-  &:hover{
-    background-color:purple;
-  }
+  font-size: 25px;
+	margin-bottom: 25px;
+
+	background: linear-gradient(red, blue);
+	background-size: 600% 600%;
+
+	-webkit-animation: AnimationName 0.001 ease infinite;
+	-moz-animation: AnimationName 0.001 ease infinite;
+	animation: AnimationName 0.001 ease infinite;
+
+	@-webkit-keyframes AnimationName {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{
+
 `;
