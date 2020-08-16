@@ -1,25 +1,25 @@
 import React from 'react';
 import io from 'socket.io-client';
+import { MainStyled } from './MainStyle';
 
 interface IMainState {
   ready: boolean;
 }
 
-export class Main extends React.Component<{},IMainState> {
+export class Main extends React.Component<{}, IMainState> {
+  private socket: SocketIOClient.Socket;
 
-  private socket:SocketIOClient.Socket;
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      ready: false
-    }
+      ready: false,
+    };
   }
 
   componentDidMount() {
     this.socket = io(origin);
     this.socket.on('connect', () => {
-      this.setState({ready: true});
+      this.setState({ ready: true });
     });
   }
   componentWillUnmount() {
@@ -27,16 +27,17 @@ export class Main extends React.Component<{},IMainState> {
   }
 
   get webSocketInfo() {
-    return this.state.ready ? `Connected websocket id: ${this.socket.id}` : 'No connected'
+    return this.state.ready ? `Connected websocket id: ${this.socket.id}` : 'No connected';
   }
-
 
   render() {
-    return <div>
-							<h1>Minesweeper (LOGO)</h1>
-							<button>Start</button><br/>
-							<button>Options</button>
-					 </div>
+    return (
+      <MainStyled>
+        <h1>Minesweeper (LOGO)</h1>
+        <button>Start</button>
+        <br />
+        <button>Options</button>
+      </MainStyled>
+    );
   }
 }
-  
