@@ -18,13 +18,21 @@ export class OfflineMode extends React.Component<{}, {}> {
 
   render() {
     return (
-      <MainStyled>
-        <button>
-          <Link to='/'>Back</Link>
-        </button>
-        <GameSettings onChange={this.onSettingsChange} />
-        <button>Play</button>
-      </MainStyled>
+      <div className='container-fluid'>
+        <MainStyled>
+
+					<GameSettings onChange={this.onSettingsChange} />
+					<br/>
+
+          <div className='row'>
+            <button className='btn btn-primary btn-lg btn-block col'>Play</button>
+            <div className='w-100'></div>
+            <Link to='/' className='col'>
+              <button className='btn btn-primary btn-lg btn-block'>Back</button>
+            </Link>
+          </div>
+        </MainStyled>
+      </div>
     );
   }
 }

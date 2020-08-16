@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import io from 'socket.io-client';
 import { sample } from 'loadsh';
@@ -46,21 +47,17 @@ export class Main extends React.Component<{}, IMainState> {
 
   render() {
     return (
-      <div className='container'>
+      <div className='container-fluid'>
         <MainStyled>
           <div className='row'>
             <MainTitle className='col'>Minesweeper (LOGO)</MainTitle>
           </div>
 
-          <div className='row'>
-            <MinButton className='btn btn-primary btn-lg btn-block col'>
-              <Link to={PATH_OFFLINE_MODE}>Start</Link>
-            </MinButton>
-          </div>
+          <Link to={PATH_OFFLINE_MODE} className='col'>
+            <MinButton className='btn btn-primary btn-lg btn-block'>Start</MinButton>
+          </Link>
 
-          <div className='row'>
-            <MinButton className='btn btn-primary btn-lg btn-block col'>Options</MinButton>
-          </div>
+          <MinButton className='btn btn-primary btn-lg btn-block col'>Options</MinButton>
         </MainStyled>
       </div>
     );

@@ -3,7 +3,7 @@ import React from 'react';
 type GameDifficult = 'easy' | 'medium' | 'hard' | 'custom';
 
 interface IGameSettingsProps {
-  onChange: (settings:IGameSettingsState) => void;
+  onChange: (settings: IGameSettingsState) => void;
 }
 
 export interface IGameSettingsState {
@@ -19,21 +19,21 @@ export interface IGameSettings {
 
 export class GameSettings extends React.Component<IGameSettingsProps, IGameSettingsState> {
   public static readonly EASY: IGameSettings = {
-    fieldHeight: 50,
-    fieldWidth: 50,
-    bombsCount: 5,
+    fieldHeight: 9,
+    fieldWidth: 9,
+    bombsCount: 10,
   };
 
   public static readonly MEDIUM: IGameSettings = {
-    fieldHeight: 100,
-    fieldWidth: 100,
-    bombsCount: 20,
+    fieldHeight: 16,
+    fieldWidth: 16,
+    bombsCount: 40,
   };
 
   public static readonly HARD: IGameSettings = {
-    fieldHeight: 200,
-    fieldWidth: 200,
-    bombsCount: 100,
+    fieldHeight: 16,
+    fieldWidth: 30,
+    bombsCount: 99,
   };
 
   constructor(props: IGameSettingsProps) {
@@ -64,11 +64,11 @@ export class GameSettings extends React.Component<IGameSettingsProps, IGameSetti
   };
 
   emitSettings() {
-      this.props.onChange(this.state);
+    this.props.onChange(this.state);
   }
 
-  onInputChange(ev: React.ChangeEvent<HTMLInputElement>, type: keyof IGameSettings ) {
-    const state  = {...this.state};
+  onInputChange(ev: React.ChangeEvent<HTMLInputElement>, type: keyof IGameSettings) {
+    const state = { ...this.state };
     const number = parseInt(ev.target.value);
     state.gameOptions[type] = number;
     this.setState(state);
@@ -78,34 +78,54 @@ export class GameSettings extends React.Component<IGameSettingsProps, IGameSetti
   get changeOptions() {
     if (this.state.difficulty === 'custom') {
       return (
-        <div>
-        <div>
-          <span>Filed Width</span>
-          <input type='text' value={this.state.gameOptions.fieldWidth} onChange={e=>{this.onInputChange(e, 'fieldWidth')}} />
+        <div className='row'>
+          <div className='col'>
+            <span>Filed Width</span>
+            <input
+              type='text'
+              value={this.state.gameOptions.fieldWidth}
+              onChange={e => {
+                this.onInputChange(e, 'fieldWidth');
+              }}
+            />
+          </div>
+					<div className='w-100'></div>
+          <div className='col'>
+            <span>Filed Height</span>
+            <input
+              type='text'
+              value={this.state.gameOptions.fieldHeight}
+              onChange={e => {
+                this.onInputChange(e, 'fieldHeight');
+              }}
+            />
+          </div>
+          <div className='col'>
+					<div className='w-100'></div>
+            <span>Bombs count</span>
+            <input
+              type='text'
+              value={this.state.gameOptions.bombsCount}
+              onChange={e => {
+                this.onInputChange(e, 'bombsCount');
+              }}
+            />
+          </div>
         </div>
-        <div>
-          <span>Filed Height</span>
-          <input type='text' value={this.state.gameOptions.fieldHeight} onChange={e=>{this.onInputChange(e, 'fieldHeight')}}  />
-        </div>
-        <div>
-          <span>Bombs count</span>
-          <input type='text' value={this.state.gameOptions.bombsCount} onChange={e=>{this.onInputChange(e, 'bombsCount')}}  />
-        </div>
-      </div>
       );
     }
 
     return (
-      <div>
-        <div>
+      <div className='row'>
+        <div className='col'>
           <span>Filed Width</span>
           <input type='text' value={this.state.gameOptions.fieldWidth} disabled />
         </div>
-        <div>
+        <div className='col'>
           <span>Filed Height</span>
           <input type='text' value={this.state.gameOptions.fieldHeight} disabled />
         </div>
-        <div>
+        <div className='col'>
           <span>Bombs count</span>
           <input type='text' value={this.state.gameOptions.bombsCount} disabled />
         </div>

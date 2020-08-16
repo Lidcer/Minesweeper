@@ -7,8 +7,9 @@ export const MainStyled = styled.div`
   height: 50vh;
   border: 1vh inset green;
   padding-top: 40px;
-	padding-bottom: 40px;
+  padding-bottom: 40px;
   text-align: center;
+  background-color: black;
   left: 50%;
   top: 50%;
   transform: translateX(-25vh) translateY(-25vh);
@@ -25,12 +26,10 @@ export const MinButton = styled.button`
   display: block;
   color: white;
   max-width: 150px;
-  max-height: 40px;
   background-color: red;
   border-radius: 10px;
   border: 1px solid white;
   transform: background-color 5s;
-  font-size: 25px;
 
   background: linear-gradient(143deg, #00e6ab, #9ccc9c, #649568, #0e6b0e);
   background-size: 800% 800%;
