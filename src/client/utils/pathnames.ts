@@ -1,0 +1,1 @@
+export const PATH_OFFLINE_MODE = 'offline-mode';  
