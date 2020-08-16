@@ -48,20 +48,19 @@ export class Main extends React.Component<{}, IMainState> {
     return (
       <div className='container'>
         <MainStyled>
-					<div className='row'>
-          	<MainTitle className='col'>Minesweeper (LOGO)</MainTitle>
-					</div>
+          <div className='row'>
+            <MainTitle className='col'>Minesweeper (LOGO)</MainTitle>
+          </div>
 
-					<div className='row'>
-						<MinButton className='btn btn-primary btn-lg btn-block col'>
-							<Link to={PATH_OFFLINE_MODE}>Start</Link>
-						</MinButton>
-					</div>
+          <div className='row'>
+            <MinButton className='btn btn-primary btn-lg btn-block col'>
+              <Link to={PATH_OFFLINE_MODE}>Start</Link>
+            </MinButton>
+          </div>
 
-					<div className='row'>
-						<MinButton className='btn btn-primary btn-lg btn-block col'>Options</MinButton>
-					</div>
-
+          <div className='row'>
+            <MinButton className='btn btn-primary btn-lg btn-block col'>Options</MinButton>
+          </div>
         </MainStyled>
       </div>
     );
