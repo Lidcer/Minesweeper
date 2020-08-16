@@ -26,6 +26,7 @@ export const MinNumber = styled.h2`
 	padding-left: 70px;
 	width: 220px;
   animation: moveText 5s infinite;
+	animation-direction: alternate;
 	color: rgba(12,12,12,0.8);
 
 	@keyframes moveText {
